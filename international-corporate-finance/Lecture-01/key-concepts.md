@@ -98,6 +98,31 @@
 
 ---
 
+## International Trade Terms (Incoterms)
+
+### CFR — Cost and Freight
+**What it is:** The seller pays for the goods and the freight to get them to the named destination port. Insurance is NOT included — the buyer has to arrange and pay for it separately.
+
+**Risk transfer point:** The moment the goods are loaded onto the ship at the origin port — even though the seller is still paying for the voyage.
+
+### CIF — Cost, Insurance and Freight
+**What it is:** Same as CFR, but the seller also buys marine insurance and hands the buyer the policy.
+
+**Risk transfer point:** Same as CFR — loading at the origin port. The seller has just pre-arranged insurance on the buyer's behalf; it doesn't shift when risk passes.
+
+**The trap:** Cost transfer and risk transfer are not the same moment. Under both terms, if the cargo is lost at sea after loading, it's legally the buyer's loss — the difference is only whether the buyer already has an insurance policy in hand (CIF) or has to sort their own out (CFR).
+
+**Why it matters for Activity I:** Russia and the USA quote CFR (add 3% insurance yourself). Netherlands quotes CIF (insurance already priced in). You can't compare the three sticker prices directly — add insurance to Russia/USA first, or you'll under-cost them relative to the Dutch quote.
+
+### Documentary Payment Methods (also relevant to Activity I)
+| Method | How it works | Risk to Seller |
+|--------|-------------|----------------|
+| **Open Account** | Buyer pays after an agreed period, no bank guarantee | Highest — seller trusts buyer to pay |
+| **D/A Bill of Exchange** | Bank releases shipping documents once buyer accepts to pay later | Medium — buyer could still default |
+| **Confirmed Irrevocable LC** | Bank guarantees payment regardless of buyer's situation | Lowest — bank carries the risk |
+
+---
+
 ## Assessment Terms
 
 | Term | Meaning |
