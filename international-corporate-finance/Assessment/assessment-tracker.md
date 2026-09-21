@@ -9,8 +9,10 @@
 |-----------|------|--------|
 | Verbal Report presentation | Week of 23–27 Nov 2026 | Book your slot in seminars |
 | Verbal Report feedback | 1 Dec 2026 | — |
-| Written Report submission | **1pm, Mon 14 Dec 2026** | — |
+| Written Report submission | **⚠️ CONFLICTING DATES — CHECK CANVAS** | Assessment brief: 14 Dec 2026 / Week 1a slides: 14 Jan 2027 |
 | Written Report feedback | 25 Jan 2027 | — |
+
+> **⚠️ DATE CONFLICT:** The assessment brief says written report deadline is **14 December 2026** but the Week 1a lecture slides say **14 January 2027**. Verify on Canvas before planning your work.
 
 ---
 
