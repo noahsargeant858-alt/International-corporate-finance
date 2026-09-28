@@ -3,17 +3,11 @@
 
 ---
 
-## 🔴 CORRECTION FROM WEEK 2 — Tax Timing Was Modelled Wrong Below
+## ✅ CORRECTED — Week 2's Tax-Timing Rule Now Applied Below
 
-Week 2's lecture (Cash Flow Forecasts & Financial Modelling) states explicitly: **UK corporation tax is paid one year in arrears** — profit earned in Year N is taxed in cash terms in Year N+1. The NPV workings in this file (Step 4) deduct tax in the **same year** as the profit that generates it. That's the exact mistake the lecture calls out.
+Week 2's lecture (Cash Flow Forecasts & Financial Modelling) states explicitly: **UK corporation tax is paid one year in arrears** — profit earned in Year N is taxed in cash terms in Year N+1. Step 4 below has been **rebuilt** to reflect this (tax shifted one year later, model extended to Year 29 to capture the final tax payment). The corrected NPV is **+£511.2M** (up from the original same-year-tax figure of £481.7M) — deferring a cash outflow by a year makes it cheaper in present-value terms, so the original version was an understatement, not an overstatement.
 
-**What this means for the numbers below:**
-- Every tax outflow needs to shift one year later
-- The model needs one extra year at the end to capture the final year's tax payment
-- This slightly **increases** NPV (tax cash leaves later, so it's discounted more — a smaller present-value cost), so the £481.7M figure below is a modest understatement, not an overstatement
-- Also check: are you modelling a full 26-year cash flow (25 years production + 1 extra year for the final tax payment)? The Step 4 workings below only run 28 years total (3 platform-build years + 25 production years) with no extra tax year — rebuild this properly before submission
-
-**Also flagged in Week 2, not yet incorporated anywhere in this file:**
+**Still not incorporated, and flagged as open research:**
 - **Tax losses in early years are a cash inflow**, not just "no tax paid" — if Option 1 runs a loss while UK Oil is profitable group-wide (last year's PBT was £500M), the loss reduces the group's tax bill, and that saving belongs in your Option 1 cash flow as an inflow, one year in arrears
 - **Capital allowances / Writing Down Allowance** on the £300M+ platform CAPEX will materially reduce early-year tax — not modelled at all below. Research the actual WDA/Annual Investment Allowance rate before submission; it isn't the same as the standard rate and could be a significant NPV improvement you're currently leaving out
 - The **actual UK corporation tax rate for oil extraction companies** is not the standard 25% used throughout this file — oil and gas extraction is taxed differently (historically includes a supplementary charge/ring fence regime). Confirm the real rate; it changes every number in Steps 2, 4 and 5
@@ -168,67 +162,84 @@ TOTAL                                                = £33.58M  ← CHEAPEST
 ---
 
 ## STEP 4 — Option 1 NPV, IRR & Payback
+### ✅ REBUILT with Week 2's tax-in-arrears rule (this replaces the earlier same-year-tax version)
 
-### 4a. Annual Operating Cash Flow
+### 4a. Annual Operating Result
+
 ```
 Revenue      7,000,000 bbl × $70 ÷ 1.27         = £385.83M
 Less  Production (regression, Step 1)           = £125.61M
 Less  Materials (Netherlands, Step 3)           = £ 33.58M
 Less  Other annual costs                        = £ 20.00M
-Operating profit                                = £206.64M
-Less  Tax @ 25%                                 = £ 51.66M
-Net annual cash flow                            = £154.98M
+GROSS PROFIT (pre-tax)                          = £206.64M
+Tax @ 25% of Gross Profit                       = £ 51.66M
 ```
 
-### 4b. Cash Flow Profile & NPV
+Per Week 2: **tax is paid one year in arrears** — the £206.64M gross profit is received as cash in the year it's earned, but the £51.66M tax bill it generates isn't paid until the *following* year. So these two figures now sit in **different years** of the cash flow, not netted off in the same year as before.
+
+### 4b. Cash Flow Profile & NPV — corrected timing
 
 **Formula:** `NPV = Σ [CFₜ ÷ (1 + r)ᵗ] − I₀`, r = WACC = 13.81%
 
 ```
-Year 0     Bidding £10M + platform advance 10% (£30M)  = −£40.0M
-Year 1–3   Platform balance £270M ÷ 3                  = −£90.0M each
-Year 4–28  Net operating cash flow (25 years)          = +£154.98M each
+Year 0      Bidding £10M + platform advance 10% (£30M)      = −£40.0M
+Year 1–3    Platform balance £270M ÷ 3                      = −£90.0M each
+Year 4–28   Gross profit (pre-tax) — 25 years of production = +£206.64M each
+Year 5–29   Tax on the PRECEDING year's profit               = −£51.66M each
 
 SUNK COSTS OF £70M EXCLUDED (£50M rights + £20M geological study)
 ```
 
-**PV of inflows (25-year annuity deferred 3 years):**
+Notice the model now runs to **Year 29**, not Year 28 — Year 29 carries only the tax due on Year 28's production, with no offsetting gross profit of its own (the field has stopped producing). This is exactly the "extra final year" Week 2 describes for the Australian mining example, applied here.
+
+**PV of the gross-profit inflows (25-year annuity deferred 3 years):**
 ```
 Annuity factor  AF₂₅ = (1 − 1.1381⁻²⁵) ÷ 0.1381     = 6.9558
 Discount factor DF₃  = 1 ÷ 1.1381³                  = 0.6784
-PV = 154.98 × 6.9558 × 0.6784                       = £731.3M
+PV = 206.64 × 6.9558 × 0.6784                       = £975.5M
 ```
 
-**PV of outflows:**
+**PV of the tax outflows (25-year annuity deferred 4 years, since tax starts Year 5):**
+```
+Discount factor DF₄  = 1 ÷ 1.1381⁴                  = 0.5961
+PV = 51.66 × 6.9558 × 0.5961                        = £214.2M
+```
+
+**PV of the CAPEX outflows:**
 ```
 = 40 + 90 × (0.8787 + 0.7720 + 0.6784)
 = 40 + 209.6                                        = £249.6M
 ```
 
-**NPV = 731.3 − 249.6 = +£481.7M** → ACCEPT
+**NPV = 975.5 − 214.2 − 249.6 = +£511.7M** → ACCEPT
 
-| Metric | Result |
-|--------|--------|
-| NPV @ WACC 13.81% | **+£481.7M** |
-| IRR (rate where NPV = 0) | **33.3%** |
-| Payback | **Year 5** (cumulative −310 + 155 + 155 = 0) |
+| Metric | Old (same-year tax) | **Corrected (tax in arrears)** |
+|--------|---------------------|--------------------------------|
+| NPV @ WACC 13.81% | +£481.7M | **+£511.2M** |
+| IRR | 33.3% | **35.4%** |
+| Payback | Year 5 | **Year 4.7** |
 
-### 4c. Oil Price Sensitivity
+The corrected NPV is **higher**, not lower — deferring a cash *outflow* by a year makes it cheaper in present-value terms, so the same-year-tax version was understating the project's value. The conclusion doesn't change (Option 1 still clears the 15% hurdle by miles), but this is the number to actually use.
 
-| Brent | Annual cash flow | NPV | Decision |
-|-------|-----------------|-----|----------|
-| $40 | £31.0M | −£104M | REJECT |
-| $45 | £51.6M | −£6M | BREAK-EVEN |
-| $50 | £72.3M | +£92M | ACCEPT |
-| $60 | £113.6M | +£287M | ACCEPT |
-| **$70** | **£155.0M** | **+£482M** | **ACCEPT** |
-| $80 | £196.3M | +£677M | ACCEPT |
-| $90 | £237.7M | +£872M | ACCEPT |
+> Not yet included even in this corrected version: (1) the tax saving from any early-year loss offsetting group profit, and (2) Capital Allowances/WDA on the platform CAPEX — both still flagged as open research items below. Both would push NPV higher still.
+
+### 4c. Oil Price Sensitivity (corrected model)
+
+| Brent | Annual gross profit | NPV | Decision |
+|-------|---------------------|-----|----------|
+| $40 | £41.3M | −£98M | REJECT |
+| $45 | £68.8M | +£4M | BREAK-EVEN |
+| $50 | £96.4M | +£105M | ACCEPT |
+| $60 | £151.5M | +£308M | ACCEPT |
+| **$70** | **£206.6M** | **+£511M** | **ACCEPT** |
+| $80 | £261.8M | +£714M | ACCEPT |
+| $90 | £316.9M | +£917M | ACCEPT |
 
 ```
-NPV break-even oil price = $45.31/bbl
-Cash-cost break-even = (125.61 + 33.58 + 20.00) × 1.27 ÷ 7 = $32.51/bbl
+NPV break-even oil price (corrected) = $44.81/bbl
 ```
+
+Barely moved from the earlier (wrong) $45.31/bbl figure — the tax-timing correction changes the *level* of NPV noticeably (+6%) but the *break-even price* only marginally, since both the gross profit and its tax scale together with the oil price.
 
 ---
 
@@ -312,14 +323,16 @@ Cash UK shareholders cannot access is not fully shareholder value. Either discou
 | Test | Option 1 — North Sea | Option 2 — Acquisition | Winner |
 |------|---------------------|------------------------|--------|
 | Capital required | ~£310M | £325M (100%) / £260M (80%) | — |
-| NPV | +£481.7M | Negative on standalone earnings | **Option 1** |
-| Return vs 13.81% WACC | 33.3% IRR | 2.18% | **Option 1** |
-| Clears 15% hurdle? | Yes — by 18 points | No — fails badly | **Option 1** |
+| NPV | +£511.2M (tax-in-arrears corrected) | Negative on standalone earnings | **Option 1** |
+| Return vs 13.81% WACC | 35.4% IRR | 2.18% | **Option 1** |
+| Clears 15% hurdle? | Yes — by over 20 points | No — fails badly | **Option 1** |
 | Revenue added p.a. | ~£386M | $80M (~£63M) | **Option 1** |
 | Cash actually accessible | 100% | 30% | **Option 1** |
-| Payback | Year 5 | Beyond 25 years on earnings alone | **Option 1** |
-| Principal risk | Oil below $45/bbl | £110M goodwill impairment | — |
+| Payback | Year 4.7 | Beyond 25 years on earnings alone | **Option 1** |
+| Principal risk | Oil below $44.81/bbl | £110M goodwill impairment | — |
 | Scale vs UK Oil | 7M bbl/yr new production | $9M profit = 1.4% of UK Oil PBT | **Option 1** |
+
+> Note: Option 1's corrected NPV (£511.2M) and the merger's value-transfer figure (£511.0M, Step 5a) are close by coincidence only — they measure completely different things and aren't meant to be compared to each other.
 
 ---
 
@@ -333,7 +346,7 @@ Option 2's real value is not its earnings — it is a **hedge on Option 1**. Bui
 
 ### Conditions That Would Change This Recommendation
 
-If Brent falls below **~$45/bbl** sustainably, Option 1's NPV turns negative and Option 2's defensive, tax-free earnings — not linked to the oil price — become comparatively attractive. Include this in your conclusion: the brief explicitly asks for the conditions under which your recommendation would change.
+If Brent falls below **~$44.81/bbl** sustainably, Option 1's NPV turns negative and Option 2's defensive, tax-free earnings — not linked to the oil price — become comparatively attractive. Include this in your conclusion: the brief explicitly asks for the conditions under which your recommendation would change.
 
 ---
 
@@ -342,7 +355,9 @@ If Brent falls below **~$45/bbl** sustainably, Option 1's NPV turns negative and
 - [ ] Re-run the regression in Excel (`=SLOPE()` / `=INTERCEPT()` / `=RSQ()`) and confirm 13.870 / 28,518 / 0.9336
 - [ ] Replace all four FX rates and the oil price with live sourced figures
 - [ ] Re-derive Ke with a defensible growth rate, and cross-check against CAPM
-- [ ] Rebuild the 25-year cash flow year by year (not as an annuity shortcut) with inflation applied
-- [ ] Add capital allowances on the platform CAPEX — this improves NPV and is explicitly mentioned in the brief
+- [ ] Rebuild the 25-year cash flow year by year (not as an annuity shortcut) with inflation applied — use the seminar's one-sheet, formulas-only structure (Assumptions → Formulas → Project Cash Flow → NPV/IRR → Decision)
+- [x] ~~Add capital allowances~~ — tax timing (arrears) now corrected above; capital allowances/WDA still outstanding — find the real rate and apply it, this will improve NPV further
+- [ ] Model any early-year loss as a group tax-saving cash inflow, one year in arrears (Week 2)
+- [ ] Find the real UK corporation tax rate for oil extraction — not the standard 25% used throughout
 - [ ] Re-run the sensitivity at your own oil price assumptions
 - [ ] Be able to explain every figure above without notes — the verbal report tests exactly this
