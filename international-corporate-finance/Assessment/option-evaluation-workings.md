@@ -3,6 +3,25 @@
 
 ---
 
+## 🔴 CORRECTION FROM WEEK 2 — Tax Timing Was Modelled Wrong Below
+
+Week 2's lecture (Cash Flow Forecasts & Financial Modelling) states explicitly: **UK corporation tax is paid one year in arrears** — profit earned in Year N is taxed in cash terms in Year N+1. The NPV workings in this file (Step 4) deduct tax in the **same year** as the profit that generates it. That's the exact mistake the lecture calls out.
+
+**What this means for the numbers below:**
+- Every tax outflow needs to shift one year later
+- The model needs one extra year at the end to capture the final year's tax payment
+- This slightly **increases** NPV (tax cash leaves later, so it's discounted more — a smaller present-value cost), so the £481.7M figure below is a modest understatement, not an overstatement
+- Also check: are you modelling a full 26-year cash flow (25 years production + 1 extra year for the final tax payment)? The Step 4 workings below only run 28 years total (3 platform-build years + 25 production years) with no extra tax year — rebuild this properly before submission
+
+**Also flagged in Week 2, not yet incorporated anywhere in this file:**
+- **Tax losses in early years are a cash inflow**, not just "no tax paid" — if Option 1 runs a loss while UK Oil is profitable group-wide (last year's PBT was £500M), the loss reduces the group's tax bill, and that saving belongs in your Option 1 cash flow as an inflow, one year in arrears
+- **Capital allowances / Writing Down Allowance** on the £300M+ platform CAPEX will materially reduce early-year tax — not modelled at all below. Research the actual WDA/Annual Investment Allowance rate before submission; it isn't the same as the standard rate and could be a significant NPV improvement you're currently leaving out
+- The **actual UK corporation tax rate for oil extraction companies** is not the standard 25% used throughout this file — oil and gas extraction is taxed differently (historically includes a supplementary charge/ring fence regime). Confirm the real rate; it changes every number in Steps 2, 4 and 5
+
+None of this changes the *conclusion* (Option 1 still clears the hurdle comfortably), but the exact NPV, IRR and payback figures below should be treated as directionally right, not final.
+
+---
+
 ## ⚠️ Assumptions (PLACEHOLDERS — REPLACE BEFORE SUBMISSION)
 
 | Variable | Placeholder used | Where to get the real figure |

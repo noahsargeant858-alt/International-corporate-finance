@@ -57,9 +57,12 @@
 **Cash Flow Model (Excel)**
 - [ ] Run regression on drilling cost data (10 previous projects)
 - [ ] Establish cost equation for 7M barrels
-- [ ] Build 25-year cash flow forecast
+- [ ] Build 25-year cash flow forecast **+ 1 extra year for the final tax payment (tax is paid 1 year in arrears — Week 2)**
 - [ ] Apply UK inflation to all £ costs year-on-year
-- [ ] Apply tax allowances on CAPEX (Activity J)
+- [ ] Apply tax allowances on CAPEX (Activity J) — find the actual Writing Down Allowance/Annual Investment Allowance rate (Week 2 homework, not yet given)
+- [ ] Find the real corporation tax rate for oil extraction companies — NOT the standard rate (Week 2 homework)
+- [ ] Shift every tax cash flow one year later than the profit that generates it
+- [ ] If any early year is a loss, treat the resulting group tax saving as a cash INFLOW (one year in arrears) — see Week 2 notes
 - [ ] Exclude sunk costs (£50M rights + £20M geological = £70M)
 - [ ] Include Activity E bidding cost (£10M) as year 0/1 outflow
 
