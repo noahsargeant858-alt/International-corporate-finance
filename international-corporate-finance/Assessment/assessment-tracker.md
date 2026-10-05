@@ -16,6 +16,17 @@
 
 ---
 
+## ⚠️ Data Conflicts Flagged in Week 3 — Verify on Canvas
+
+| Item | Case study brief says | Week 3 lecture says | Status |
+|------|----------------------|---------------------|--------|
+| Option 2 (M&A) rights issue — minimum value of the right | **> £1.00** | **> £1.50** | Unresolved — check Canvas or ask tutor before using either in your valuation |
+| Unsecured Bond redemption year | **2027** | **2025** | Unresolved — check Canvas or ask tutor |
+
+Both numbers feed directly into Option 2's financing recommendation and the WACC/gearing calculations respectively — do not guess which is correct, confirm it.
+
+---
+
 ## Real-Time Data Log
 *Update these regularly — reference them in your report*
 
@@ -81,6 +92,9 @@
 - [ ] Calculate WACC for optimal mix
 - [ ] Compare rights issue pricing (£1.00–£1.25 range) vs current market £3.50
 - [ ] Evaluate SPE structure
+- [ ] **Do NOT list advantages/disadvantages of equity vs debt — give a justified recommendation based on evaluating them (explicitly a zero-mark answer otherwise, Week 3)**
+- [ ] Factor in existing gearing (Equity £1,925M vs Debt £700M) — new debt likely prices ABOVE the existing 6–7% given the higher resulting leverage
+- [ ] If recommending a $ loan or bond, explicitly address the FX risk it creates (you'd owe $, project earns £) unless it's hedging an existing $ cost
 
 ### Option 2: Arabic Oil Supplies M&A
 
