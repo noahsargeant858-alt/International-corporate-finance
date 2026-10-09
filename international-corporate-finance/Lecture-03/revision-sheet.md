@@ -87,10 +87,16 @@ Share Premium = (Issue Price − Nominal Value) × new shares = £1 × 100,000 =
 
 ---
 
-## ⚠️ Two Numbers That Conflict With Your Case Study Brief — Verify Before Submission
+## ✅ Two Conflicts — Resolved by the 2026 Assessment Brief
 
-| Item | This lecture says | Your case study brief says | Action |
-|---|---|---|---|
+| Item | This lecture said | Official 2026 brief (USE THIS) |
+|---|---|---|
+| Option 2 rights issue threshold | > £1.50 (older "Euro Refinery" version of the case) | **Value of right over £1.00** |
+| Unsecured bond redemption | 2025 | **2027** |
+
+Worked rights issue for UK Oil's actual numbers: `Assessment/UK-Oil-Rights-Issue-Model.xlsx`.
+
+---|---|---|---|
 | Option 2 rights issue threshold | Value of right must be **> £1.50** | Value of right must be **> £1.00** | Check Canvas / ask tutor |
 | Unsecured bond redemption | **2025** | **2027** | Check Canvas / ask tutor |
 

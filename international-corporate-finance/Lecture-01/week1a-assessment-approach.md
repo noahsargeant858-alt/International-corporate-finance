@@ -6,7 +6,7 @@
 ## ⚠️ DATE DISCREPANCY — CHECK CANVAS
 
 The slides (Week 1a, slide 20) show the written report deadline as:
-**1pm Monday 14th January 2027**
+~~1pm Monday 14th January 2027~~ → **1pm Monday 14th December 2026** (official 2026 Assessment Brief overrides these slides)
 
 But the assessment brief document says:
 **1pm Monday 14th December 2026**

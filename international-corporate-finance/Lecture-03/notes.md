@@ -225,7 +225,7 @@ General conditions precedent · conditions precedent to each drawdown · availab
 - **Merger**: possible via a 1-for-1 share exchange
 - **Acquisition** of 80–100% at **£1.30/share**, financed by either a Rights Issue or Debt via an SPV
 
-> ⚠️ **CHECK THIS AGAINST YOUR CASE STUDY BRIEF:** this lecture states a Rights Issue for the acquisition "would attract support provided the value of the right is over **£1.50**." Earlier case-study material you have says the threshold is **£1.00**. These do not match — verify which figure is correct (check Canvas / ask in seminar) before using either number in your valuation. See `Assessment/assessment-tracker.md` for this flagged as an open discrepancy.
+> ✅ **RESOLVED:** this lecture said the value of the right must be over **£1.50**, but that came from an older "Euro Refinery" version of the case. The official 2026 Assessment Brief says **over £1.00**, so use £1.00. See `Assessment/UK-Oil-Rights-Issue-Model.xlsx`.
 
 ### What the Board actually wants from you
 
@@ -269,7 +269,7 @@ Your recommendation must be based on evaluating:
 | Secured Loan (Floating Rate) | £200M | Base 5.25% + Margin 1.75% = **7.00%** (August 2023) |
 | Unsecured Bonds | £500M | **6%**, repayable **2025** |
 
-> ⚠️ **CHECK THIS AGAINST YOUR CASE STUDY BRIEF:** this lecture states the unsecured bond is repayable in **2025**. Earlier case-study material refers to a "6% Bond **2027**." Verify the correct redemption year before using either in your written report — another discrepancy to resolve via Canvas or your seminar tutor.
+> ✅ **RESOLVED:** the official 2026 Assessment Brief says the unsecured bond is **"6% Bond 2027"**, so use 2027, not the 2025 shown on this slide.
 
 ### The core gearing principle
 

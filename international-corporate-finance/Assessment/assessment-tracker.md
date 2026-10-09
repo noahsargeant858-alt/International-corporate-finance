@@ -9,21 +9,35 @@
 |-----------|------|--------|
 | Verbal Report presentation | Week of 23–27 Nov 2026 | Book your slot in seminars |
 | Verbal Report feedback | 1 Dec 2026 | — |
-| Written Report submission | **⚠️ CONFLICTING DATES — CHECK CANVAS** | Assessment brief: 14 Dec 2026 / Week 1a slides: 14 Jan 2027 |
+| Written Report submission | **1.00pm, Monday 14 December 2026** | Confirmed by the official 2026 Assessment Brief (Sem 1 v1). The Week 1a slides said 14 Jan 2027 — ignore that |
 | Written Report feedback | 25 Jan 2027 | — |
-
-> **⚠️ DATE CONFLICT:** The assessment brief says written report deadline is **14 December 2026** but the Week 1a lecture slides say **14 January 2027**. Verify on Canvas before planning your work.
 
 ---
 
-## ⚠️ Data Conflicts Flagged in Week 3 — Verify on Canvas
+## ✅ Data Conflicts — Resolved by the Official 2026 Assessment Brief
 
-| Item | Case study brief says | Week 3 lecture says | Status |
-|------|----------------------|---------------------|--------|
-| Option 2 (M&A) rights issue — minimum value of the right | **> £1.00** | **> £1.50** | Unresolved — check Canvas or ask tutor before using either in your valuation |
-| Unsecured Bond redemption year | **2027** | **2025** | Unresolved — check Canvas or ask tutor |
+| Item | 2026 Assessment Brief (USE THIS) | Older source | Status |
+|------|----------------------------------|--------------|--------|
+| Written report deadline | **1pm, 14 Dec 2026** | Week 1a slides: 14 Jan 2027 | Resolved |
+| Option 2 (M&A) rights issue — minimum value of the right | **Over £1.00** | Week 3 slides: £1.50 (they also call the target "Euro Refinery", so they come from an older version of the case) | Resolved |
+| Unsecured Bond redemption year | **2027** | Week 3 slides: 2025 | Resolved |
 
-Both numbers feed directly into Option 2's financing recommendation and the WACC/gearing calculations respectively — do not guess which is correct, confirm it.
+## ⚠️ AI Use — Tier Two (from the brief)
+
+GenAI is allowed in an **assistive** role only. If you use it, your slides AND report must include an **AI Acknowledgement** that gives:
+- the name and version of the tool
+- the publisher/provider
+- the web address
+- a short description of how you used it
+- whether it was free or paid, and which model
+
+If you leave it out, it can be treated as an academic integrity breach.
+
+---
+
+## Rights Issue Model
+
+`Assessment/UK-Oil-Rights-Issue-Model.xlsx` prices the rights issue for Option 1 (£310M) and Option 2 (80% = £260M, 100% = £325M) using the brief's figures. Base case is £1.25: every scenario passes the "over £1.00" test (£2.25 by the lecture definition, about £1.80 by TERP − issue). Book value per share falls from £1.70 to about £1.60. Debt ÷ equity gearing falls from 36.4% to about 31%. The **EUR/GBP rate on the Inputs tab is a placeholder**, so swap in the real-time rate before you use the Munchen figures.
 
 ---
 
