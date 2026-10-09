@@ -50,7 +50,8 @@ If you leave it out, it can be treated as an academic integrity breach.
 | USD/GBP | | | Bank of England |
 | EUR/GBP | | | Bank of England |
 | RUB/GBP | | | Bank of England |
-| BoE Base Rate | | | bankofengland.co.uk |
+| BoE Base Rate | **3.75%** (held 17 Sep 2026, 6–3 vote; next decision 5 Nov 2026, rise expected) | 9 Oct 2026 | bankofengland.co.uk |
+| Sterling IG corporate bond yield | 5.71% YTM (index; BBB+ likely ~6%) | 31 Aug 2026 data | SPDR Bloomberg Sterling Corporate Bond ETF factsheet (ssga.com) |
 | UK CPI (inflation) | | | ONS |
 | UK Corporation Tax Rate | | | HMRC |
 
