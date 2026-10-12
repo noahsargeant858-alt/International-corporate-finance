@@ -47,9 +47,9 @@ If you leave it out, it can be treated as an academic integrity breach.
 | Data Point | Value | Date Checked | Source |
 |-----------|-------|-------------|--------|
 | Brent Crude Oil Price | | | macrotrends.net / eia.org |
-| USD/GBP | | | Bank of England |
-| EUR/GBP | | | Bank of England |
-| RUB/GBP | | | Bank of England |
+| USD/GBP | £1 = $1.3235 | 12 Oct 2026 | Trading Economics / FXStreet (confirm on Bank of England) |
+| EUR/GBP | £1 ≈ €1.17 (July 2026 quote — UPDATE) | — | Bank of England |
+| RUB/GBP | £1 = ₽112.75 (Bank of Russia 113.32 on 7 Oct) | 12 Oct 2026 | Eurochange interbank |
 | BoE Base Rate | **3.75%** (held 17 Sep 2026, 6–3 vote; next decision 5 Nov 2026, rise expected) | 9 Oct 2026 | bankofengland.co.uk |
 | Sterling IG corporate bond yield | 5.71% YTM (index; BBB+ likely ~6%) | 31 Aug 2026 data | SPDR Bloomberg Sterling Corporate Bond ETF factsheet (ssga.com) |
 | UK CPI (inflation) | | | ONS |
@@ -71,8 +71,8 @@ If you leave it out, it can be treated as an academic integrity breach.
 - [ ] Convert USA ($430/ton) to £ using current USD/GBP + add 0.25% collection charges
 - [ ] Convert Netherlands (€390/ton) to £ using current EUR/GBP + add 0.75% LC charges
 - [ ] Add insurance (3% on C&F) for Russia and USA
-- [ ] Add freight (£5M p.a.) — check if this is per supplier or universal
-- [ ] Recommend supplier with justification
+- [x] Add freight (£5M p.a.) — Russia only: CFR Ust Luga stops at a Russian port; USA CFR Dover and NL CIF Dover include freight (see `UK-Oil-Supplier-Comparison.xlsx`)
+- [ ] Recommend supplier with justification — Russia cheapest on cost (£32.56M vs £33.55M USA, £33.58M NL) but sanctions risk; USA vs NL hinges on EUR rate (breakeven €1.171) and NL wins after credit benefit
 
 **Platform Supplier Comparison**
 - [ ] Convert Munchen €355M to £ using current EUR/GBP
